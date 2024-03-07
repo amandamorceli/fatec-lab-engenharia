@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1</title>
+</head>
+<body>
+    <script>
+        /*Implemente um script JavaScript que solicite ao usuário um número inteiro 
+        positivo. Assim que o usuário digitar um valor válido informe em uma janela 
+        de alerta se o número é ou não primo.*/
+
+        let div = 2;
+        let aux = 0;
+        let numero = parseInt(prompt("Digite um número inteiro positivo:",""));
+        while(div <= Math.sqrt(numero)){
+            if(numero%div === 0){
+                aux += 1
+            } div++
+        }    
+        if(aux >= 1){
+            alert("O número não é primo!")
+        }else{
+            alert("O número é primo!")
+        }
+    </script>
+    
+</body>
+</html>
