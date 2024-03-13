@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana 2</title>
+</head>
+<body>
+
+        <h2>Exercício da semana 2</h2>
+            
+            <input type="text" id="inputDado">
+            <button type="submit" onclick="adicionarDadosArray()">Adicionar</button>
+        
+        <p>Lista ordenada do elementos adicionados</p>
+
+        <ol id="lista-ordenada">
+        </ol>
+    
+    <script>
+
+        const vetorDados = [];
+        const listaOrdenada = document.getElementById("lista-ordenada");
+    
+        function adicionarDadosArray(){
+            let inputDado = document.getElementById("inputDado").value; // armazenando o dado em uma variável
+            vetorDados.push(inputDado); // push no vetor
+            vetorDados.sort(); // ordenando o vetor - vetor final ordenado
+            console.log(vetorDados);
+        
+            listaOrdenada.innerHTML = ''; // limpa a lista para iniciar 
+
+            for(let i = 0; i < vetorDados.length; i++){ // percorrer o a quantidade de elementos no vetor
+                let itemLista = document.createElement("li"); // criando um item de lista
+                itemLista.textContent = vetorDados[i]; // colocando conteúdo do vetor dentro da lista
+                listaOrdenada.appendChild(itemLista); // fazendo append na lista ordenada do html
+            } 
+            
+        }
+        /*Implemente um script com um array cujos valores sejam adicionados dinamicamente 
+        pelo usuário utilizando-se formulário. A cada nova inserção exiba todos os dados 
+        cadastrados em ordem alfabética em uma lista ordenada do html. */
+        
+    </script>
+</body>
+</html>
