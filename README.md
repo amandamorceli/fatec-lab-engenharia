@@ -1,2 +1,2 @@
 # fatec-lab-engenharia
-Portifólio de exercícios da disciplina de Laboratório de Engenharia da FATEC
+Repositório de exercícios desenvolvidos em javascript da disciplina de Laboratório de Engenharia da FATEC
