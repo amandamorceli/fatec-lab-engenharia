@@ -10,9 +10,9 @@
         <h2>Exercício da semana 2</h2>
             
             <input type="text" id="inputDado">
-            <button type="submit" onclick="adicionarDadosArray()">Adicionar</button>
+            <button type="submit" onclick="adicionarDadosVetor()">Adicionar</button>
         
-        <p>Lista ordenada do elementos adicionados</p>
+        <p>Lista ordenada dos elementos adicionados</p>
 
         <ol id="lista-ordenada">
         </ol>
@@ -22,18 +22,18 @@
         const vetorDados = [];
         const listaOrdenada = document.getElementById("lista-ordenada");
     
-        function adicionarDadosArray(){
-            let inputDado = document.getElementById("inputDado").value; // armazenando o dado em uma variável
-            vetorDados.push(inputDado); // push no vetor
-            vetorDados.sort(); // ordenando o vetor - vetor final ordenado
+        function adicionarDadosVetor(){
+            let inputDado = document.getElementById("inputDado").value; 
+            vetorDados.push(inputDado); 
+            vetorDados.sort(); 
             console.log(vetorDados);
         
-            listaOrdenada.innerHTML = ''; // limpa a lista para iniciar 
+            listaOrdenada.innerHTML = '';  
 
-            for(let i = 0; i < vetorDados.length; i++){ // percorrer o a quantidade de elementos no vetor
-                let itemLista = document.createElement("li"); // criando um item de lista
-                itemLista.textContent = vetorDados[i]; // colocando conteúdo do vetor dentro da lista
-                listaOrdenada.appendChild(itemLista); // fazendo append na lista ordenada do html
+            for(let i = 0; i < vetorDados.length; i++){ 
+                let itemLista = document.createElement("li"); 
+                itemLista.textContent = vetorDados[i]; 
+                listaOrdenada.appendChild(itemLista); 
             } 
             
         }
