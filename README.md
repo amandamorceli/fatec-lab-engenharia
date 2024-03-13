@@ -1,2 +1,2 @@
 # fatec-lab-engenharia
-Portfólio de exercícios
+Portifólio de exercícios da disciplina de Laboratório de Engenharia
