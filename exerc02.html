@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercício 1</title>
+    <title>Exercício 2</title>
 </head>
 <body>
     <script>
@@ -13,7 +13,10 @@
 
         let div = 2;
         let aux = 0;
-        let numero = parseInt(prompt("Digite um número inteiro positivo:",""));
+        let numero;
+        while(isNaN(numero)){
+            numero = parseInt(prompt("Digite um número inteiro positivo:",""));
+        }
         while(div <= Math.sqrt(numero)){
             if(numero%div === 0){
                 aux += 1
