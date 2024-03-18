@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3.2</title>
+</head>
+
+<body>
+    <p><a href="semana3.html">Voltar</a> para o menu anterior.</p><br>
+    <h1>Horário atual</h1>
+    <p>Clique no botão abaixo para visualizar</p>
+    <button onclick="horarioAtual()">Mostrar</button><br>
+    <p id="mostrarAqui"></p>
+
+    <script>
+
+        function horarioAtual() {
+            const date = new Date();
+            document.getElementById("mostrarAqui").innerHTML = date.toLocaleTimeString("pt-BR");
+        }
+    </script>
+</body>
+
+</html>
