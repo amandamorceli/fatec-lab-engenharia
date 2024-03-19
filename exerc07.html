@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3.3</title>
+</head>
+
+<body>
+
+    <p><a href="semana3.html">Voltar</a> para o menu anterior.</p><br>
+    
+    <h1>Palíndromo</h1>
+    <p>Digite uma paravra para verificar se é ou não palíndromo no botão.</p>
+    <input type="text" id="inputPalavra">
+    <button type="submit" onclick="verificarPalindromo()">Verificar</button>
+
+    <script>
+
+        function palindrome(palavra) {
+            palavra = palavra.replace(/\s/g, "").toLowerCase();
+            const reversed = palavra.split("").reverse().join("");
+            return palavra === reversed;
+        }
+
+        function verificarPalindromo() {
+            let palavra = document.getElementById("inputPalavra").value;
+            if (palindrome(palavra)) {
+                alert("É palíndromo!");
+            } else {
+                alert("Não é palíndromo!");
+            }
+        }
+    </script>
+
+</body>
+
+</html>
