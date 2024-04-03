@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de pessoas</title>
+    <style>
+        
+        .container {
+            text-align: center;
+            margin: auto;
+            width: 96%;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #f8f8f8;
+            display: flex; 
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .subcontainer {
+            flex: 0 0 45%; 
+        }
+
+        .botao {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%; 
+            height: auto; 
+        }
+
+        .titulo-container {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 20px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+        }
+
+        p {
+            font-size: 18px;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            
+            var div = document.getElementById("container_contador")
+
+            var div_titulo = document.createElement("div")
+            div_titulo.classList.add("titulo-container")
+            div.append(div_titulo)
+
+            var titulo = document.createElement("h2")
+            titulo.textContent = "Contador de pessoas"
+            div_titulo.appendChild(titulo)
+
+            var reset = document.createElement("img") 
+            reset.src = './icone_reset.png'
+            reset.style.width = "20px"; 
+            reset.style.marginLeft = "10px"; 
+            div_titulo.appendChild(reset)
+
+            var paragrafo_contador = document.createElement("p") //vai exibir quantidade total 
+            div_titulo.appendChild(paragrafo_contador)
+
+            var div_pessoas = document.createElement("div"); 
+            div_pessoas.classList.add("container");
+            div.appendChild(div_pessoas)
+
+            var div_homem = document.createElement("div")
+            div_homem.classList.add("subcontainer")
+            div_pessoas.appendChild(div_homem)
+
+            var imagem_homem = document.createElement("img")
+            imagem_homem.src = "./usuario.png"
+            imagem_homem.style.width = "50%"; 
+            div_homem.appendChild(imagem_homem)
+
+            var div_botaoHomem = document.createElement("div")
+            div_homem.appendChild(div_botaoHomem)
+
+            var botaoSomarHomem = document.createElement("button")
+            botaoSomarHomem.textContent = "+"
+            div_botaoHomem.appendChild(botaoSomarHomem)
+
+            var botaoSubtrairHomem = document.createElement("button")
+            botaoSubtrairHomem.textContent = "-"
+            div_botaoHomem.appendChild(botaoSubtrairHomem)
+
+            var paragrafoHomem = document.createElement("p")
+            paragrafoHomem.textContent = "Homens"
+            div_homem.appendChild(paragrafoHomem)
+
+            var paragrafo_contadorHomem = document.createElement("p") //vai exibir quantidade de homens
+            div_homem.appendChild(paragrafo_contadorHomem)
+
+            var div_mulher = document.createElement("div")
+            div_mulher.classList.add("subcontainer")
+            div_pessoas.appendChild(div_mulher)
+
+            var imagem_mulher = document.createElement("img")
+            imagem_mulher.src = "./usuaria.png"
+            imagem_mulher.style.width = "50%"; 
+            div_mulher.appendChild(imagem_mulher)
+
+            var div_botaoMulher = document.createElement("div")
+            div_mulher.appendChild(div_botaoMulher)
+
+            var botaoSomarMulher = document.createElement("button")
+            botaoSomarMulher.textContent = "+"
+            div_botaoMulher.appendChild(botaoSomarMulher)
+
+            var botaoSubtrairMulher = document.createElement("button")
+            botaoSubtrairMulher.textContent = "-"
+            div_botaoMulher.appendChild(botaoSubtrairMulher)
+
+            var paragrafoMulher = document.createElement("p") 
+            paragrafoMulher.textContent = "Mulheres"
+            div_mulher.appendChild(paragrafoMulher)
+
+            var paragrafo_contadorMulher = document.createElement("p") //vai exibir a quantidade de mulheres
+            div_mulher.appendChild(paragrafo_contadorMulher)
+
+            div.classList.add("container");
+            botaoSomarHomem.classList.add("botao");
+            botaoSubtrairHomem.classList.add("botao");
+            botaoSomarMulher.classList.add("botao");
+            botaoSubtrairMulher.classList.add("botao");
+        })
+    </script>
+</head>
+
+<body>
+    <div id="container_contador">
+    </div>
+</body>
+
+</html>
